@@ -19,3 +19,9 @@ total_stciks = 13
 """Initialize game variables"""
 sticks_left = total_stciks
 current_player = 1
+
+"""Game instructions"""
+print('Welcome to Pick up Sticks!')
+print(f'Players take turns picking between {min_sticks} and {max_sticks} sticks.')
+print('The player who takes the last stick wins.')
+print(f'Total sticks in the pile: {total_stciks}\n')
