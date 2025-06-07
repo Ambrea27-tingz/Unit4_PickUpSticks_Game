@@ -4,7 +4,7 @@
 
    Unit 3: Lab 3
 
-   Description: Guess The Number / Hangman Game. A program that asks the player to guess a random number between 1 and 15. 
+   Description:Guess The Number / Hangman Game. A program that asks the player to guess a random number between 1 and 15. 
    If the guess is incorrect, the next body part is added to the hangman.  
    """
 
@@ -43,4 +43,13 @@ while sticks_left > 0:
             print("Invalid input. Please enter a valid integer.")
 
         
-        
+    """Remove sticks from the pile"""
+    sticks_left -= sticks_taken
+
+    """Check if the game is over"""
+    if sticks_left == 0:
+        print(f"Player {current_player} wins!")
+        break
+
+    """Switch to the next player"""
+    current_player = 2 if current_player == 1 else 1
